@@ -12,13 +12,7 @@ var app = express();
 
 
 
-// CORSを許可する
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
-
+// CROSを許可する
 const allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
@@ -38,7 +32,7 @@ const allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain)
 
 // app.use((req, res, next) => {
-//   // CORSのためのhttpリクエストヘッダー設定
+//   // CROSのためのhttpリクエストヘッダー設定
 //   // res.header('Access-Control-Allow-Origin', 'http://localhost:8080') // （必須）許可するリクエストURLを指定
 //   res.header('Access-Control-Allow-Headers', 'X-Requested-With, Authorization') // （必須）許可するカスタムヘッダーの設定
 //   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS') // 許可するメソッドの設定（コメントアウトしても動作する）
