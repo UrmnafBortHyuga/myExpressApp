@@ -18,6 +18,19 @@ app.use(function(req, res, next) {
   next();
 });
 
+// app.use((req, res, next) => {
+//   // CORSのためのhttpリクエストヘッダー設定
+//   // res.header('Access-Control-Allow-Origin', 'http://localhost:8080') // （必須）許可するリクエストURLを指定
+//   res.header('Access-Control-Allow-Headers', 'X-Requested-With, Authorization') // （必須）許可するカスタムヘッダーの設定
+//   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS') // 許可するメソッドの設定（コメントアウトしても動作する）
+//   res.header('Access-Control-Max-Age', '600') // preflightリクエスト結果をキャッシュする時間の設定（コメントアウトしても動作する）
+//   // （必須）preflightリクエストに対してのみ、httpOKステータスを返すために必要
+//   if (req.method === 'OPTIONS') { 
+//     res.status(200).send()
+//   }
+//   next();
+// });
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
